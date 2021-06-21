@@ -1,5 +1,5 @@
-<div >
-    
+
+    <div class="centerdiv">
 
     <div class="col-sm 12">
         <div class="col-sm-6 mx-auto shadow-lg">
@@ -8,12 +8,12 @@
             <div class="p-4">
                 <form >
                     <div class="form-group">
-                        <label for="URL">Paste URL Here:</label>
-                        <input type="url" [(ngModel)]="linkToShorten.long_url" name="long_url" placeholder="https://example.com" class="form-control col-sm-6 border border-secondary" required>
+                        <input type="url" [(ngModel)]="linkToShorten.long_url" name="long_url" placeholder="Paste Your URL Here" class="form-control col-sm-6 border border-secondary" style="border-radius: 50px;" required>
                         <div *ngIf="error">{{message}}</div>
                     </div>
+                    <br>
                     <div class="form-group">
-                        <button type="button" (click)="getShortLink()" class="btn btn-outline-success">Submit</button>
+                        <button type="button" (click)="getShortLink()" class="btn btn-outline-success" style="border-radius: 50px; width: 100px;">Submit</button>
                     </div>
 
                     <hr>

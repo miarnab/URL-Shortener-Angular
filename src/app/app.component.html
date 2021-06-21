@@ -1,33 +1,65 @@
-<div class="navbar navbar-expand-lg navbar-dark bg-success">
-  <a class="navbar-brand" href="javascript:void(0)">Link Shortener By Arnab!</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navb">
-    <ul class="navbar-nav mr-auto">
-      
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <label for="search" class="mr-sm-2" >Search this site</label>
-      <input class="form-control mr-sm-2 shade" type="search" placeholder="Search" data-toggle="tooltip" title="Search anything on this site. Click Search when done ->">
-      <button class="btn btn-outline-dark shade mr-2 mr-sm-1" data-toggle="tooltip" title="Search anything on this site" type="button">Search</button>
-
-    </form>
-  </div>
-</div>
-
+<div style="background-image: url(https://unsplash.com/photos/FewHpO4VC9Y/download?force=true&w=1920);">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">URL Shortener</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">More Info..</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50px;">
+          <button class="btn btn-outline-success" type="submit" style="border-radius: 50px;">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<br>
+<br>
 <div class="p-4">
   <router-outlet></router-outlet>
 </div>
+<br>
+<br>
 
-
-
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <address >
-    Developed By: Arnab Mitra <br>
-    API Used: Bitly - https://dev.bitly.com/ <br>
-    Date: 2021/06/20 <br>
-  </address>
-  
+<footer class="footer centerdiv">
+  <br>
+ <div class="row">
+   <div class="col-md-4">
+     
+       <p><a href="#">Home</a></p>
+       <p><a href="#">About Us</a></p>
+       <p><a href="#">More Info</a></p>
+   </div> 
+  <div class="col-md-4">
+    <address >
+      Developed By: Arnab Mitra <br>
+      API Used: Bitly - https://dev.bitly.com/ <br>
+      Date: 2021/06/20 <br>
+    </address>
+  </div>
+  <div class="col-md-4">
+    <p>ABC Pvt. Ltd.</p>
+    <p>Address: XYZ Street, PQR. TUV-123456.</p>
+    <p>Phone: 1234567890</p>
+    <p>Email: abc@gmail.com</p>
+  </div>
+</div>
+<p> Made with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg> by Arnab Mitra.</p>
+<br>
+<p>Copyright &copy; of ABC Pvt. Ltd 2021</p>
+<br>
+</footer>
 </div>
