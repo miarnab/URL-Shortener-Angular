@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LinkToShorten } from '../models/link-to-shorten.model';
 import { ShortenedLink } from '../models/shortened-link.model';
 import { BitlyServiceService } from '../service/bitly-service.service';
+import { Clipboard } from "@angular/cdk/clipboard";
 
 @Component({
   selector: 'app-url',
@@ -19,7 +20,8 @@ export class UrlComponent implements OnInit {
   error = false;
   message: string='';
 
-  constructor(private service: BitlyServiceService) { }
+  constructor(private service: BitlyServiceService,
+    public clipboard: Clipboard) { }
 
   ngOnInit(): void {
   }
@@ -58,6 +60,21 @@ export class UrlComponent implements OnInit {
       }, 3000)
     }
 
+  }
+  copyMessage(val: string){
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.innerText = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    this.clipboard.copy(val);
+    window.alert("Link Copied to Clipboard");
   }
 
 }
