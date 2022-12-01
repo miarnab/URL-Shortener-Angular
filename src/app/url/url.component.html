@@ -1,23 +1,23 @@
 
-    <div class="centerdiv">
+  <div class="centerdiv">
 
-    <div class="col-sm 12">
-        <div class="col-sm-6 mx-auto shadow-lg">
+    <div class="col-sm-12">
+        <div class="col-sm-6 mx-auto shadow-lg container">
             <h2 class="p-2">Link Shortener</h2>
-            
-            <div class="p-4">
-                <form >
+
+            <div class="p-4 ">
+                <form>
                     <div class="form-group">
                         <input type="url" [(ngModel)]="linkToShorten.long_url" name="long_url" placeholder="Paste Your URL Here" class="form-control col-sm-6 border border-secondary" style="border-radius: 50px;" required>
                         <div *ngIf="error">{{message}}</div>
                     </div>
                     <br>
                     <div class="form-group">
-                        <button type="button" (click)="getShortLink()" class="btn btn-outline-success" style="border-radius: 50px; width: 100px;">Submit</button>
+                        <button type="button" (click)="getShortLink()" class="btn btn-success" style="border-radius: 50px; width: 100px;">Submit</button>
                     </div>
 
                     <hr>
-                    
+
                     <div *ngIf="urlResult; else elseBlock">
                         <label>Here is your link</label>
                         <input type="text" readonly [value]="answer.link" class="form-control col-sm-10"  style="border-radius: 50px;" disabled value="">

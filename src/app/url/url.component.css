@@ -5,3 +5,18 @@
     color: white;
 }
 
+.container:hover{
+  background: lightgreen;
+  animation: mymove 5s 1 linear;
+}
+
+.container{
+  border-radius: 50px;
+
+}
+
+@keyframes mymove {
+  100% {transform: rotate(360deg);}
+}
+
+
